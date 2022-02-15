@@ -139,7 +139,7 @@
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
-                        <div class="col-sm-5"><h2>Product <b>Gegevens</b></h2>
+                        <div class="col-sm-5"><h2>Article <b>Gegevens</b></h2>
 
                         </div>
                         <div class="col-sm-3 ">

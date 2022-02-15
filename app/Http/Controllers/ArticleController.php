@@ -80,7 +80,7 @@ class ArticleController extends Controller
         $delete = DB::table('articles')->where('id', $id)->delete();
 
         if ($delete) {
-            return back()->with('succes', 'Product is uit de database verwijdert');
+            return back()->with('succes', 'Article is uit de database verwijdert');
         } else {
             return back()->with('fail', 'Er ging iets fout');
         }
