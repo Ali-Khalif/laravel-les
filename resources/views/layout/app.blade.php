@@ -38,19 +38,17 @@
                 <a class="nav-link " href="{{asset('/Article')}}">Blog</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="{{asset('/create')}}">create</a>
+                <a class="nav-link" href="{{asset('/create')}}">Create</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link " href="{{asset('#')}}">someting</a>
+                <a class="nav-link " href="{{asset('#')}}">Someting</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link " href="{{asset('#')}}">Dashboard</a>
+                <a class="nav-link " href="{{asset('/admin-articles')}}">Admin CRUD</a>
             </li>
-            <li class="nav-item ">
-                <a class="nav-link " href="{{asset('/Article')}}">Blog</a>
-            </li>
-            <li>
-                <a class="nav-link  " href="{{asset('/contact')}}">Contact</a>
+
+            <li class="nav-item  ">
+                <a class="nav-link float-md-end" href="{{asset('/contact')}}">Contact</a>
 
             </li>
 
