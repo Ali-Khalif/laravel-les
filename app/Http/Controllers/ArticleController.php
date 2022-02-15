@@ -52,6 +52,12 @@ class ArticleController extends Controller
 
 
     }
+    public function read()
+    {
+        $articles = DB::table('articles')->get();
+        return view('pages.admin', ['articles' => $articles]);
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -69,9 +75,15 @@ class ArticleController extends Controller
         return view();
     }
 
-    public function delete()
+    public function delete($id)
     {
-        return view();
+        $delete = DB::table('articles')->where('id', $id)->delete();
+
+        if ($delete) {
+            return back()->with('succes', 'Product is uit de database verwijdert');
+        } else {
+            return back()->with('fail', 'Er ging iets fout');
+        }
     }
 
 

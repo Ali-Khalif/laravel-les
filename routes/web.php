@@ -30,7 +30,8 @@ Route::get('contact', function ()
     return view('pages.contact');
 });
 
-
+Route::get('/admin-articles',[ArticleController::class,'read']);
+Route::get('delete/{id}',[ArticleController::class, 'delete']);
 
 
 // de home page heb in de Articlecontroller gezet.
