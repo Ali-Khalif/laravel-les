@@ -28,10 +28,10 @@ class ArticleController extends Controller
 
     }
     public function content($id)
-        {
-            $article = Article::find($id);
-            return view('pages.article-page',['article'=>$article]);
-        }
+    {
+        $article = Article::find($id);
+        return view('pages.article-page',['article'=>$article]);
+    }
 
     public function store(Request $request)
     {
@@ -41,8 +41,8 @@ class ArticleController extends Controller
             'content' => 'required',
         ]);
 
-       //hier wordt de gegevens in de database opgeslagen
-       $query = Article::create($request->all());
+        //hier wordt de gegevens in de database opgeslagen
+        $query = Article::create($request->all());
 
         if ($query){
             return back()->with('succes', 'Article is opgelsagen');
