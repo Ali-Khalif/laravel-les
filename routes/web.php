@@ -15,19 +15,22 @@ use App\Http\Controllers\ArticleController;
 |
 */
 //
-Route::resource('articles','ArticleController');
-//de route verwijst naar de ArticleController met de functie home en weergeeft de thuis pagina
+Route::resource('articles', ArticleController::class);
+
+
+
+////de route verwijst naar de ArticleController met de functie home en weergeeft de thuis pagina
 Route::get('/', [ArticleController::class, 'home']);
-////de route verwijst naar de ArticleController met de functie index
-Route::get('/Article', [ArticleController::class, 'index']);
-//// create functie
-Route::get('create', [ArticleController::class,'create']);
-//// store functie
-Route::post('store', [ArticleController::class,'store']);
-////de route verwijst naar de ArticleController met de functie content
-Route::get('article/{id}',[ArticleController::class,'content']);
+//////de route verwijst naar de ArticleController met de functie index
+//Route::get('/Article', [ArticleController::class, 'index']);
+////// create functie
+//Route::get('create', [ArticleController::class,'create']);
+////// store functie
+//Route::post('store', [ArticleController::class,'store']);
+//////de route verwijst naar de ArticleController met de functie content
+//Route::get('article/{id}',[ArticleController::class,'content']);
 Route::get('/admin-articles',[ArticleController::class,'read']);
-Route::get('delete/{id}',[ArticleController::class, 'delete']);
+//Route::get('delete/{id}',[ArticleController::class, 'delete']);
 
 Route::get('contact', function ()
 {

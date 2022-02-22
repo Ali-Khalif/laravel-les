@@ -19,7 +19,7 @@
         @endif
 
 
-        <form class="form" method="POST" action="store">
+        <form class="form" method="POST" action="{{ route('articles.store')}}">
             @csrf
 
             <div class="form-group">

@@ -13,21 +13,24 @@ class ArticleController extends Controller
     {
         $articles = Article::all();
 
-        return view('index',['articles'=>$articles]);
+        return view('index',['articles'=> $articles]);
     }
     public function index()
     {
         $articles = Article::all();
+        return view('pages.blog',['articles'=>$articles]);
+        //return view('pages.blog')->with('articles', $articles);
 
-        return view('pages.blog', ['articles' => $articles]);
+        //return view('pages.blog', compact(games) ['articles' => $articles]);
     }
+
 
     public function create()
     {
         return view('pages.create');
 
     }
-    public function content($id)
+    public function show($id)
     {
         $article = Article::find($id);
         return view('pages.article-page',['article'=>$article]);
@@ -75,7 +78,7 @@ class ArticleController extends Controller
         return view();
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         $delete = DB::table('articles')->where('id', $id)->delete();
 

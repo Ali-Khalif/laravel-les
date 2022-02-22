@@ -7,13 +7,13 @@
 
         <div class="Add">
 
-            <a href="{{asset('/create')}}">
+            <a href="{{asset('articles/create')}}">
                 Add new Article
             </a>
         </div>
         @foreach($articles as $article )
             <article>
-                <a href="/article/{{$article['id']}}">{{ $article -> title  }}</a>
+                <a href="/article.content/{{$article['id']}}">{{ $article -> title  }}</a>
                 <p> {{ $article -> content }}</p>
 
             </article>

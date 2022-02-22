@@ -73,8 +73,13 @@
         table.table td:last-child {
             width: 130px;
         }
+        .btn-danger{
+            color: #E34724;;
+            display: inline-block;
+            margin: 0 5px;
 
-        table.table td a {
+        }
+        table.table td a{
             color: #a0a5b1;
             display: inline-block;
             margin: 0 5px;
@@ -90,6 +95,11 @@
 
         table.table td a.delete {
             color: #E34724;
+        }
+        table.table td form button{
+            background-color: transparent;
+            display: inline-block;
+
         }
 
         table.table td i {
@@ -172,6 +182,7 @@
                     @foreach($articles as $article)
 
 
+
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -189,12 +200,22 @@
                                         class="material-icons">&#xE417;</i></a>
                                 <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
                                         class="material-icons">&#xE254;</i></a>
-                                <a href="/delete/{{$article->id}}" class="delete"
+
+                                <a href="/artices.destroy/{{$article->id}}" class="delete"
                                    onclick="return confirm('Weet je zeker dat je article met de ID {{$article->id}} en de deze {{$article->title}}  wilt verwijderen?')"
                                    title="Delete" data-toggle="tooltip"><i
                                         class="material-icons">&#xE872;</i></a>
+                                <form method="post" action="{{ route('articles.destroy',$article->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="delete btn-danger "
+                                            onclick="return confirm('Weet je zeker dat je article met de ID {{$article->id}} en de deze {{$article->title}}  wilt verwijderen?')"
+                                            title="Delete" data-toggle="tooltip"><i
+                                            class="material-icons">&#xE872;</i></button>
+                                </form>
                             </td>
                         </tr>
+
 
                         </tbody>
                     @endforeach

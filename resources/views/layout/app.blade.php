@@ -35,16 +35,16 @@
             <li class="nav-item  active">
                 <a class="nav-link " href="{{asset('/')}}">Home</a></li>
             <li class="nav-item ">
-                <a class="nav-link " href="{{asset('/Article')}}">Blog</a>
+                <a class="nav-link " href="{{asset('articles')}}">Blog</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="{{asset('/create')}}">Create</a>
+                <a class="nav-link" href="{{asset('articles/create')}}">Create</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link " href="{{asset('#')}}">Someting</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link " href="{{asset('/admin-articles')}}">Admin CRUD</a>
+                <a class="nav-link " href="{{asset('admin-articles')}}">Admin CRUD</a>
             </li>
 
             <li class="nav-item  ">
