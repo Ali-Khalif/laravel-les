@@ -5,7 +5,7 @@
 
         <div class="Add">
 
-            <a href="{{asset('/create')}}">
+            <a href="{{url('/articles/create')}}">
                 Add new Article
             </a>
         </div>
@@ -13,8 +13,13 @@
         @foreach($articles as $article )
             <article>
                 <!-- wanneer op de title van de article is geklikt wordt je naar article pagine  -->
-                <a href="/article/{{$article['id']}}">{{ $article -> title  }}</a>
-                <p> click on the title to read this Article</p>
+                <a href="{{route('articles.show',$article->id)}}">{{ $article -> title  }}
+                <!--show content Str::limit($article->content,20)-->
+                <p>{{ Str::limit($article->content,50) }}</p>
+                </a>
+
+
+
             </article>
         @endforeach
     </div>

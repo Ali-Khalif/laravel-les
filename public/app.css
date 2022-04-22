@@ -48,7 +48,7 @@ header {
 }
 
 /*font-weight 400 is the same as normal, and 700 is the same as bold*/
-li, a, button {
+li {
     font-weight: 500;
     font-size: 1.5rem;
     color: white;
@@ -74,14 +74,7 @@ li, a, button {
     color: #0088a9;
 }
 
-button {
-    padding: 0 20px;
-    background: rgba(0, 175, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
+
 
 button:hover {
     background: rgba(0, 175, 169, 0.7);
@@ -118,7 +111,7 @@ hr {
     position: relative;
 }
 
-form {
+.form {
     padding: 1rem 0.875rem;
     width: 90%;
     margin: 0 auto;
@@ -162,7 +155,7 @@ form {
     font-size: large;
     margin: 25px auto;
     padding: 1rem 0.875rem;
-    width: 80%;
+    width: 20%;
     background-color: lightseagreen;
 }
 
@@ -347,9 +340,10 @@ article {
         width: 100%;
     }
 
+}
 
-
-
+td{
+    width: 25%;
 }
 
 

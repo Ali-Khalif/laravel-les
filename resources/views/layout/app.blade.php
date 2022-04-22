@@ -25,7 +25,7 @@
 
 </style>
 <nav class="navbar navbar-expand-lg navbar-light  gap-4 p-4 ">
-    <a class="navbar-brand" href="{{asset('/')}}">Laravel-Les</a>
+    <a class="navbar-brand" href="{{url('/articles')}}">Laravel-Les</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
                 <a class="nav-link " href="{{asset('articles')}}">Blog</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="{{asset('articles/create')}}">Create</a>
+                <a class="nav-link" href="{{url('/articles/create')}}">Create</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link " href="{{asset('#')}}">Someting</a>

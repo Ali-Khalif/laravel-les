@@ -8,7 +8,10 @@
         <div class="content">
             <h2 class="modal-title text-decoration-underline">{{$article['title']}}</h2>
             <p class="text-body">{{$article['content']}}</p>
-            <div class="btn-link" style="color: #0a53be"><a href="/">GA TERUG</a></div>
+            <div class="btn-link" style="color: #0a53be"><a href="/"><button class="btn btn-lg">
+                        Ga terug naar de homepage
+                    </button>
+                </a></div>
 
         </div>
     </div>

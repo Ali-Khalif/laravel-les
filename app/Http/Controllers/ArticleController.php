@@ -70,13 +70,26 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        return view('pages.edit');
+        //return view with the article
+        $article = Article::find($article->id);
+        return view('pages.edit', compact('article'));
     }
 
-    public function update()
+    public function update(Request $request, Article $article)
     {
-        return view();
+        //validate the input
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+
+        //update the article
+        $article->update($request->all());
+
+        //redirect to the article page
+        return redirect()->route('articles.show', $article->id)->with('succes', 'Article is aangepast');
     }
+
 
     public function destroy($id)
     {
